@@ -1,0 +1,14 @@
+2025-05-27 10:05:03 [python] INFO: Iniciando ejecución del script.
+2025-05-27 10:05:03 [python] INFO: Procesando archivo: /usr/share/ssadata/csv_HGP/files/maquinas.csv
+2025-05-27 10:05:03 [python] INFO: Iniciando procesamiento de datos
+2025-05-27 10:05:03 [python] ERROR: No se encontró el archivo: /usr/share/ssadata/csv_HGP/files/maquinas.csv
+2025-05-27 10:05:03 [python] ERROR: No se encontró el archivo: /usr/share/ssadata/csv_HGP/files/maquinas.csv
+2025-05-27 10:05:03 [python] ERROR: Traceback (most recent call last):
+  File "C:\Users\andgal\OneDrive - ManpowerGroup\DATA\CLIENTES\TRABAJO\ACCIONA\Software Desarrollado\HGP\integracion-hgp\main.py", line 86, in main
+    run_process()
+  File "C:\Users\andgal\OneDrive - ManpowerGroup\DATA\CLIENTES\TRABAJO\ACCIONA\Software Desarrollado\HGP\integracion-hgp\main.py", line 73, in run_process
+    procesar_datos(csv_path=csv_file)
+  File "C:\Users\andgal\OneDrive - ManpowerGroup\DATA\CLIENTES\TRABAJO\ACCIONA\Software Desarrollado\HGP\integracion-hgp\hgp\functions.py", line 102, in procesar_datos
+    raise FileNotFoundError(f"No se encontró el archivo: {csv_path}")
+FileNotFoundError: No se encontró el archivo: /usr/share/ssadata/csv_HGP/files/maquinas.csv
+

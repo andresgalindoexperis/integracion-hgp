@@ -1,9 +1,15 @@
 {
-    "aerogeneradores":[
+    "tables": [
         {
-            "nombre":"España",
-            "tabla":"/usr/share/ssadata/csv_HGP/files/maquinas.csv",
-            "columnas":[""]
+            "aerogeneradores": {
+                "columns": {},
+                "content": [
+                    {
+                        "pais": "España",
+                        "table": "aerogeneradores"
+                    }
+                ]
+            }
         }
     ]
 }

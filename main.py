@@ -23,13 +23,36 @@ def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description='Procesamiento de Datos HGP de Acciona'
     )
+
+    '''
+    #Toma el nombre del archivo de log como argumento
+    # de línea de comandos. Descomentar si se desea usar esta funcionalidad.
     parser.add_argument(
         '--log-file',
         required=True,
         help='Ruta del archivo de log',
         type=str
     )
-    return parser.parse_args()
+    '''
+
+    # Configuración del archivo de log
+    # Aquí se define un archivo de log por defecto con un timestamp
+    from datetime import datetime
+    import os
+
+    # Crear directorio logs si no existe
+    log_dir = os.path.join(os.path.dirname(__file__), 'logs')
+    os.makedirs(log_dir, exist_ok=True)
+
+    # Generar nombre del archivo con timestamp
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    log_file = os.path.join(log_dir, f'hgp_process_{timestamp}.log')
+
+    # Crear un namespace con el archivo de log predefinido
+    args = argparse.Namespace()
+    args.log_file = log_file
+
+    return args
 
 
 def run_process() -> None:
